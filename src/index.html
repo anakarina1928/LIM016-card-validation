@@ -1,14 +1,115 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><!--es el tipo de documento-->
+
+<html><!--encierra todo el contenido de la pagina entera, es la etiqueta raiz.-->
+
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8"><!-- indico el juego de carcacteres-->
     <title>Tarjeta de crédito válida</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+  <body><!--con <body> muestro todo el contenido que deseo mostrar al usuario en la web.-->
+
+    <!--trato de usar los elementos semanticos en HTML, que significa? que describe 
+      claramente lo que significa cada etiqueta tanto para el nevegador como para el
+       programador
+       Las etiquetas de HTML son las que deben describir el contenido, en lugar de 
+       su presentacion-->
+
+    <section class="imgCenter">
+      <!--el <header> especifica el encabezado de mi documento -->
+     <header><img id="titulo" class="vidasana" src="imagenes/vidasana3.png"/></header> 
+     
+    </section>
+
+    <section class="validacionCorrecta"><!--el elemento <section> nos define una seccion 
+      del documento.-->
+
+
+      <section id="correcto" class="errorValidacion">
+
+        <h2 id="exitosa">¡El registro de  tu suscripción fue exitosa!</h2><!--utilizando 
+        <section> generalmente se usa con un titulo-->
+        
+        <p id="numero1"></p>
+
+        <button id="reinicio1" class="boton"> volver atrás</button>
+
+        <p>Este sitio esta protegido<br> y aplica la política de privacidad</p>
+
+      </section>
+ 
+      <section id="incorrecto" class="errorValidacion">
+      
+        <h2 id="negado"> Debes insertar una tarjeta válida para el registro</h2>
+
+        <p id="numero2"></p>
+
+        <button  id="reinicio2" class="boton">¡Inténtalo de nuevo!</button>
+
+        <p>Este sitio esta protegido<br> y aplica la política de privacidad</p>
+
+      
+      </section>
+    </section>  
+    
+    
+    <main class="contenedoPradre" ><!--mi etiqueta <main> la uso para agrupar el contenido mas importante
+      de la pagina.-->
+      <section id="general" class="infoGeneral">
+
+        <h1>¡SaludyVida te ahorra tiempo!</h1>
+
+        <section class="parrafo">   
+          
+          <!--Las etiquetas en pueden estar anidadas, o sea dentro de una etiqueta puede haber otra.-->
+          <p>&#127817 Prueba <strong>GRATIS</strong> por 30 dias<br> con nuestras recetas saludables.</p>
+      
+          <p class="salto"><strong>&#127817 Cancelar tu suscripción cuando quieras.</strong> <br>
+            te recordamos 3 días antes de que termine tu prueba.</p>
+        </section> 
+        <br>
+        <br>
+        
+    
+          <h2>Número de tarjeta:</h2>
+          <input type="text" id="tarjeta" placeholder="ejm:**** **** **** ****">
+
+          <p id="error"></p>
+          <br>
+          <br>
+
+          <section class="contendedorPadreRegistro">
+
+            <div class="detallesDeTarjeta">
+
+              <label>Fecha de vencimiento:</label>
+           
+              <input type="month" id="fecha" placeholder="MM/AA">
+
+            </div>
+
+            <div  class="detallesDeTarjeta">
+
+            <label>Código de seguridad:</label>
+            <input type="text" id="segurity" maxlength="3" placeholder="***">
+            </div>
+            <br>
+            <br>
+          </section>
+
+           <p>vence el 10 de noviembre de 2021   S/100.00</p>
+           <br>
+           <br>
+         
+        <button id="validar" class="boton">¡Obten prueba gratis!</button><!--Boton para validar tarjeta-->
+      </section>
+    
+        <section class="cocina" id="imagen" > <img class="imagen" src="imagenes/cocina02.png"/></section>
+    </main>
+
+    <!-- con el <footer> define el pie de pagina de un documento, se que es para info de contacto , etc.-->
+    <footer ><p  class="textoAbajo">&#127803 Hecho con amor por Ana Karina&#127803</p> </footer>
+   
     <script src="index.js" type="module"></script>
   </body>
 </html>
