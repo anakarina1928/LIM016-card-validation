@@ -1,0 +1,123 @@
+
+body {
+    background-image:url(imagenes/fondosalud2.png);/* fondo de pantallla*/
+    align:center;
+    }
+     
+.vidasana{
+    width: 695px;/* aqui estamos calculando el ancho de la imagen*/
+    border-radius: 20px;
+    align:center;
+}     
+h1{
+    align-content:center;
+    justify-content:center;
+    color:#f8faf8;
+    font-family: unset;
+
+}            
+
+.errorValidacion{
+    display:none; /* con display estoy ocultando el contenedor valido o no dentro de la misma pagina*/
+    justify-content:center;
+    text-align: center;
+    border: 5px solid #183d0b; /* Un borde para mis dos contenedores, donde se mostrara la validacion 
+    de la tarjeta*/
+    width: 695px; /*el ancho del borde*/ 
+    background-color:#0b3d28e0;
+    border-radius: 20px;
+    
+ }
+
+.validacionCorrecta{
+    display: flex;
+    justify-content:center;
+    color:#f8faf8;
+    font-family: unset;
+
+} 
+
+.contenedoPradre{
+    display: flex;/*Para comenzar a utilizar el diseño de caja flexible (Flexbox)
+     añadimos al contenedor la propiedad “display:flex”*/
+    font-family: system-ui;/*tipo de letra*/
+    text-align:justify;/* aliniacion centrada del texto de mi contenedor*/
+    color:#f8faf8;/*color de la letra*/
+    justify-content: center;
+    color:#a1dba1;
+    
+}
+
+.contendedorPadreRegistro{
+    display: flex;
+    font-size: small;
+    justify-content: space-evenly;
+}
+
+.detallesDeTarjeta{ 
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+#error{
+    text-align:center;
+    font-family: unset;
+    color: red;
+
+}
+
+#segurity,#fecha{
+    width: 4em;
+    height: 1em;
+    text-align:center;
+    
+}
+.cocina{
+    background: #183d0bd0;/* un fondo color verde para la imagen*/
+    border-radius: 20px;
+   
+} 
+.imgCenter{
+    display:flex;
+    justify-content:center;
+
+}
+.imagen{
+    max-width: 100%;
+    max-height: 100%;
+    min-width: max-content; /*determino la anchura minima que tendra la imagen*/
+    border-radius: 20px;
+    margin: .5em;
+    align:center;
+    
+
+}       
+.infoGeneral{
+    background-color:#0b3d28e0;
+    border-radius: 20px;
+    text-align: center;
+    
+}
+.parrafo{
+    text-align:justify;
+    margin-left: 2em;
+    margin-right: 2em ;
+    color:#f8faf8;
+    
+}
+.boton{
+    background-color:#8fd775;
+    border-radius: 20px;
+    border: 2px solid #fafafd;
+    font-family: unset;
+    font-size: large;
+    margin-bottom: 1em;
+ }
+ 
+ .textoAbajo{
+    font-family: unset;
+    color: #183d0b;
+    text-align:center;
+ };
