@@ -1,123 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
 
 body {
-    background-image:url(imagenes/fondosalud2.png);/* fondo de pantallla*/
-    align:center;
-    }
-     
-.vidasana{
-    width: 695px;/* aqui estamos calculando el ancho de la imagen*/
-    border-radius: 20px;
-    align:center;
-}     
-h1{
-    align-content:center;
-    justify-content:center;
-    color:#f8faf8;
-    font-family: unset;
+    background-color: rgb(240, 245, 245);
+    grid-row: span 2;
+    font-family: sans-serif;
+}
 
-}            
+.container-father {
 
-.errorValidacion{
-    display:none; /* con display estoy ocultando el contenedor valido o no dentro de la misma pagina*/
-    justify-content:center;
-    text-align: center;
-    border: 5px solid #183d0b; /* Un borde para mis dos contenedores, donde se mostrara la validacion 
-    de la tarjeta*/
-    width: 695px; /*el ancho del borde*/ 
-    background-color:#0b3d28e0;
-    border-radius: 20px;
-    
- }
+    margin: 20px auto;
+    display: grid;
+    /*espaciados  entre las columnas y filas*/
+    grid-template-columns: repeat(3, 1fr);
+    /*funcion para repetir las columnas y no tener que escribir cada una*/
+    grid-template-rows: repeat(4, auto);
+}
 
-.validacionCorrecta{
+.container-father header {
     display: flex;
-    justify-content:center;
-    color:#f8faf8;
-    font-family: unset;
+    justify-content: space-between;
+    background: #0F0E3A;
+    color: aliceblue;
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
 
-} 
+.vali-card {
+    display: flex;
+    align-content: center;
+    padding: 10px;
 
-.contenedoPradre{
-    display: flex;/*Para comenzar a utilizar el diseño de caja flexible (Flexbox)
-     añadimos al contenedor la propiedad “display:flex”*/
-    font-family: system-ui;/*tipo de letra*/
-    text-align:justify;/* aliniacion centrada del texto de mi contenedor*/
-    color:#f8faf8;/*color de la letra*/
+}
+
+.tex-vali {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    color:#a1dba1;
     
+    left: 127px;
+    font-size: 48px;
+    background: linear-gradient(180deg, #A5A6F6 0%, #0D1C50 99.99%, rgba(89, 123, 241, 0) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
 }
 
-.contendedorPadreRegistro{
+.correo-card {
     display: flex;
-    font-size: small;
-    justify-content: space-evenly;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
-.detallesDeTarjeta{ 
+.text-verifica-tarjeta {
+    width: 540px;
+    height: 127px;
+    font-size: 48px;
+    line-height: 64px;
+
+    color: #0F0E3A;
+}
+
+.container-father .contenido {
+    grid-column: span 2;
+    display: flex;
+    
+    flex-direction: column;
+    grid-row: span 2;
+    margin: 1.2vw;
+    height: 600px;
+
+
+}
+
+.input-verificacion {
+    background: #e77409;
+    border-radius: 10px;
+    margin: 80px;
+    width: 463px;
+    height: 287px;
+    background: linear-gradient(180deg, rgba(15, 32, 37, 0.96) 3.65%, #7879F1 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
-    
+    align-items: center;
+    justify-content: center;
+
+
+
 
 }
 
-#error{
-    text-align:center;
-    font-family: unset;
-    color: red;
+.input-line {
+    color: #fff;
+    background: linear-gradient(180deg, rgba(15, 32, 37, 0.96) 3.65%, #7879F1 100%);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 40px;
 
 }
 
-#segurity,#fecha{
-    width: 4em;
-    height: 1em;
-    text-align:center;
-    
-}
-.cocina{
-    background: #183d0bd0;/* un fondo color verde para la imagen*/
-    border-radius: 20px;
-   
-} 
-.imgCenter{
-    display:flex;
-    justify-content:center;
+.maestro-visa {
+    display: flex;
+    gap: 20px;
+    width: 305px;
+    height: 28px;
+    left: 373px;
+    top: 389px;
+    font-size: 25px;
+    color: #FFFFFF;
+
 
 }
-.imagen{
-    max-width: 100%;
-    max-height: 100%;
-    min-width: max-content; /*determino la anchura minima que tendra la imagen*/
-    border-radius: 20px;
-    margin: .5em;
-    align:center;
-    
 
-}       
-.infoGeneral{
-    background-color:#0b3d28e0;
-    border-radius: 20px;
-    text-align: center;
-    
+
+
+.container-father .sidebar {
+    grid-column: 3/4;
+    background: #e77409;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: span 2;
+    margin: 1.2vw;
+    min-height: 100px;
+    /* con este le indicamos que 
+    su tamaño menino debe ser de 100px, asi no se vera tan 
+    chiquito cuando se vea en dispositivos moviles*/
 }
-.parrafo{
-    text-align:justify;
-    margin-left: 2em;
-    margin-right: 2em ;
-    color:#f8faf8;
-    
+
+
+.footer-text {
+    background: #0F0E3A;
+    color: aliceblue;
+    grid-column: span 3;
+    min-height: 80px;
+
 }
-.boton{
-    background-color:#8fd775;
-    border-radius: 20px;
-    border: 4px solid #E8635A #F2E05E#60DBB4 #5E2F9A #E88D5A ;
-    font-family: unset;
-    font-size: large;
-    margin-bottom: 1em;
- }
- 
- .textoAbajo{
-    font-family: unset;
-    color: #183d0b;
-    text-align:center;
- };
+
+@media screen and (max-width:768px) {
+    body {
+        background-color: black;
+    }
+
+    .container-father .contenido {
+        grid-column: 1/-1;
+    }
+
+    .container-father .sidebar {
+        grid-column: 1/-1;
+    }
+
+}
